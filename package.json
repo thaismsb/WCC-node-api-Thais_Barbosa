@@ -1,0 +1,24 @@
+{
+  "name": "wcc-node-api-thais_barbosa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaismsb/WCC-node-api-Thais_Barbosa.git"
+  },
+  "author": "Thais Barbosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaismsb/WCC-node-api-Thais_Barbosa/issues"
+  },
+  "homepage": "https://github.com/thaismsb/WCC-node-api-Thais_Barbosa#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
