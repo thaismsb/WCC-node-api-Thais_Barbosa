@@ -2,14 +2,23 @@ const express = require("express");
 
 const app = express();
 
-const port = 8000;
+const port = 8080;
 
 app.use(express.json());
 
-app.get("/", function(req,res){
-    res.send("Dasa Educa - Artigos");
+app.get("/", function(req,response){
+    response.send("Dasa Educa - Artigos");
 });
-
+// app.post("/:id", function(request,response){
+//     console.log(request.body, request.params.id);
+//     response.send("Dasa Educa - Post");
+// });
+// app.put("/", function(request,response){
+//     response.send("Dasa Educa - Put");
+// });
+// app.delete("/:id", function(request,response){
+//     response.send("Dasa Educa - Delete");
+// });
 // app.get("/segunda-req", function(req,res){
 //     res.send("Minha SEGUNDA requisição")
 // });
@@ -33,6 +42,15 @@ app.get("/", function(req,res){
 //     console.log(req.params.id);
 //     res.send("Meu delete funciona " + req.params.id);
 // })
+const database = require("./models");
+database.sequelizeDatabase.sync();
+// database.sequelizeDatabase.sync({force:true}).then(()=> {
+//     console.log("Drop and re-sync db.")
+// });
+
+
+const router = require("./routes/artigos.routes");
+router(app);
 
 app.listen(port,function(){
 console.log("ouvindo a porta:", port);
