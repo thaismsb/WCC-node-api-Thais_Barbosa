@@ -2,13 +2,13 @@ const express = require("express");
 
 const app = express();
 
-const port = 8080;
+const port = 8000;
 
 app.use(express.json());
 
-app.get("/", function(req,response){
-    response.send("Dasa Educa - Artigos");
-});
+// app.get("/", function(req,response){
+//     response.send("Dasa Educa - Artigos");
+// });
 // app.post("/:id", function(request,response){
 //     console.log(request.body, request.params.id);
 //     response.send("Dasa Educa - Post");
@@ -54,4 +54,5 @@ router(app);
 
 app.listen(port,function(){
 console.log("ouvindo a porta:", port);
+
 });
