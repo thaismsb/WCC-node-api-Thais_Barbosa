@@ -7,6 +7,8 @@
 
       router.post("/", artigosController.create);
       router.get("/", artigosController.findAll);
+      router.get("/findByTitle/", artigosController.findByTitle);
+      router.get("/findById/", artigosController.findById);
       app.use("/artigos", router);
    }
 
