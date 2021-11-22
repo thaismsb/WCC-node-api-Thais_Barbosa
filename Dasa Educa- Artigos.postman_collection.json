@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "ee370fb0-1cbe-4e0a-85f5-ca685e0ec62d",
+		"name": "Dasa Educa- Artigos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Requisição de artigo pelo título",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/artigos/findByTitle?titulo=artigo2024",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"artigos",
+						"findByTitle"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "artigo2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requisição de artigo por id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "context-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/artigos/findById?id=17",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"artigos",
+						"findById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requisição de todos os artigos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "context-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/artigos/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"artigos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criação de artigos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"artigohoje5\",\r\n    \"descricao\": \"ultimo artigo criado\",\r\n    \"publicado\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/artigos/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"artigos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar todos os artigos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/artigos/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"artigos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Arquivos que foram publicados (true)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/artigos/published",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"artigos",
+						"published"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar um artigo pelo id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/artigos/31",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"artigos",
+						"31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar um artigo pelo id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"titulo\": \"artigoatualizado\",\r\n        \"descricao\": \"ultimo artigo criado\",\r\n        \"publicado\": false\r\n       \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/artigos/32",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"artigos",
+						"32"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar vários artigos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/artigos/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"artigos",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8000"
+		}
+	]
+}
